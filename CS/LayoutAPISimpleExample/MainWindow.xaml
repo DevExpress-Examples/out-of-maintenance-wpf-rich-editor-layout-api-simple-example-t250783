@@ -1,0 +1,11 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit" x:Class="LayoutAPISimpleExample.MainWindow"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid>
+
+        <dxre:RichEditControl x:Name="richEdit" HorizontalAlignment="Stretch" Margin="0" ShowBorder="False" VerticalAlignment="Stretch"/>
+
+    </Grid>
+</Window>
