@@ -34,7 +34,7 @@ Namespace LayoutAPISimpleExample
         #Region "#DocumentFormatted"
         Private Sub DocumentLayout_DocumentFormatted(ByVal sender As Object, ByVal e As EventArgs)
 
-            richEdit.BeginInvoke(New Action(Sub()
+            richEdit.Dispatcher.BeginInvoke(New Action(Sub()
                 Dim pageCount As Integer = richEdit.DocumentLayout.GetFormattedPageCount()
                 For i As Integer = 0 To pageCount - 1
                     Dim visitor As New MyDocumentLayoutVisitor()
