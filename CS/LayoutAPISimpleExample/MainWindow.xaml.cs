@@ -37,7 +37,7 @@ namespace LayoutAPISimpleExample
         private void DocumentLayout_DocumentFormatted(object sender, EventArgs e)
         {
 
-            richEdit.BeginInvoke(new Action(() =>
+            richEdit.Dispatcher.BeginInvoke(new Action(() =>
             {
                 int pageCount = richEdit.DocumentLayout.GetFormattedPageCount();
                 for (int i = 0; i < pageCount; i++)
