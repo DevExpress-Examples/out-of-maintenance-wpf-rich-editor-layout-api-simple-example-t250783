@@ -13,7 +13,7 @@ namespace LayoutAPISimpleExample {
         public override void DrawFloatingPicture(LayoutFloatingPicture floatingPicture) {
             base.DrawFloatingPicture(floatingPicture);
             Rectangle bounds = floatingPicture.Bounds;
-            Point startPoint = new Point(bounds.X + 40, bounds.Y + bounds.Height - 120);
+            Point startPoint = new Point(bounds.X + Canvas.ConvertToDrawingLayoutUnits(40, DocumentLayoutUnit.Pixel), bounds.Y + bounds.Height - Canvas.ConvertToDrawingLayoutUnits(120, DocumentLayoutUnit.Pixel));
             Canvas.DrawString("Approved", new Font("Courier New", 26), new RichEditBrush(System.Windows.Media.Colors.DarkRed), startPoint);
         }
     }
