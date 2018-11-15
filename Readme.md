@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/LayoutAPISimpleExample/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/LayoutAPISimpleExample/MainWindow.xaml))
+* [MainWindow.xaml.cs](./CS/LayoutAPISimpleExample/MainWindow.xaml.cs) (VB: [MainWindow.xaml](./VB/LayoutAPISimpleExample/MainWindow.xaml))
+* [MyDocumentLayoutVisitor.cs](./CS/LayoutAPISimpleExample/MyDocumentLayoutVisitor.cs) (VB: [MyDocumentLayoutVisitor.vb](./VB/LayoutAPISimpleExample/MyDocumentLayoutVisitor.vb))
+* [MyLayoutPainter.cs](./CS/LayoutAPISimpleExample/MyLayoutPainter.cs) (VB: [MyLayoutPainter.vb](./VB/LayoutAPISimpleExample/MyLayoutPainter.vb))
+<!-- default file list end -->
 # WPF Rich Editor Layout API - Simple Example
 
 
