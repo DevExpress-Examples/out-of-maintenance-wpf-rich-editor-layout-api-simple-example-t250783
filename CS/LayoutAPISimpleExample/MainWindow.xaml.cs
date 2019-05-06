@@ -24,10 +24,17 @@ namespace LayoutAPISimpleExample
         {
             InitializeComponent();
         }
+        public static bool customDrawImage;
+        public static bool customDrawText;
+        public static bool customDrawTable;
+        public static bool customDrawPicture;
+        public static bool customDrawTextBox;
+        public static bool customDrawSeparator;
+        public static bool customDrawPage;
+
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            richEdit.BeforePagePaint += RichEdit_BeforePagePaint;
             richEdit.LoadDocument("Grimm.docx");
             richEdit.DocumentLayout.DocumentFormatted += DocumentLayout_DocumentFormatted;
         }
@@ -49,8 +56,65 @@ namespace LayoutAPISimpleExample
         }
         #endregion #DocumentFormatted
 
-        private void RichEdit_BeforePagePaint(object sender, DevExpress.XtraRichEdit.BeforePagePaintEventArgs e) {
+        private void RichEdit_BeforePagePaint(object sender, DevExpress.XtraRichEdit.BeforePagePaintEventArgs e)
+        {
             e.Painter = new MyLayoutPainter();
         }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            customDrawText = (textCheckBox.IsChecked == true) ? true : false;
+            richEdit.Refresh();
+        }
+
+        private void TableCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            customDrawTable = (tableCheckBox.IsChecked == true) ? true : false;
+            richEdit.Refresh();
+        }
+
+        private void FloatingCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            customDrawPicture = (floatingCheckBox.IsChecked == true) ? true : false;
+            richEdit.Refresh();
+        }
+
+        private void TextBoxCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            customDrawTextBox = (textBoxCheckBox.IsChecked == true) ? true : false;
+            richEdit.Refresh();
+        }
+
+        private void InlineCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            customDrawImage = (inlineCheckBox.IsChecked == true) ? true : false;
+            richEdit.Refresh();
+        }
+
+        private void PageCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            customDrawPage = (pageCheckBox.IsChecked == true) ? true : false;
+            richEdit.Refresh();
+        }
+
+        private void ListCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            customDrawSeparator = (listCheckBox.IsChecked == true) ? true : false;
+            richEdit.Refresh();
+        }
+
+        private void CheckbtnCustomDraw_Checked(object sender, RoutedEventArgs e)
+        {
+            if (checkbtnCustomDraw.IsChecked == true)
+            {
+                richEdit.BeforePagePaint += RichEdit_BeforePagePaint;
+            }
+            else
+            {
+                richEdit.BeforePagePaint -= RichEdit_BeforePagePaint;
+            }
+            richEdit.Refresh();
+        }
+
     }
 }

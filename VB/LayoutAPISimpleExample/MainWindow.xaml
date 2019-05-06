@@ -1,11 +1,45 @@
-<Window
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit" x:Class="LayoutAPISimpleExample.MainWindow"
-        Title="MainWindow" Height="600" Width="800" Loaded="Window_Loaded">
-    <Grid>
-
-        <dxre:RichEditControl x:Name="richEdit" HorizontalAlignment="Stretch" Margin="0" ShowBorder="False" VerticalAlignment="Stretch"/>
-
-    </Grid>
+        xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit" 
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        x:Class="LayoutAPISimpleExample.MainWindow"
+        Title="Layout API Simple Example" 
+        Height="600" 
+        Width="800" 
+        Loaded="Window_Loaded">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Left" Width="190" Margin="0,70,0,294">
+            <Label Content="Enable Custom Draw" Margin="0,0,75,0"/>
+            <dxe:ToggleSwitchEdit x:Name="checkbtnCustomDraw" 
+                                  Margin="0,0,135,0" 
+                                  EditValueChanged="CheckbtnCustomDraw_Checked" 
+                                  ContentPlacement="Inside"/>
+            <dxe:CheckEdit Content="Text" 
+                           x:Name="textCheckBox" 
+                           EditValueChanged="CheckBox_Checked"/>
+            <dxe:CheckEdit Content="Table" 
+                           x:Name="tableCheckBox" 
+                           EditValueChanged="TableCheckBox_Checked"/>
+            <dxe:CheckEdit Content="Floating Picture" 
+                           x:Name="floatingCheckBox" 
+                           EditValueChanged="FloatingCheckBox_Checked"/>
+            <dxe:CheckEdit Content="Text Box" 
+                           x:Name="textBoxCheckBox" 
+                           EditValueChanged="TextBoxCheckBox_Checked"/>
+            <dxe:CheckEdit Content="Inline Picture" 
+                           x:Name="inlineCheckBox" 
+                           EditValueChanged="InlineCheckBox_Checked"/>
+            <dxe:CheckEdit Content="Page" 
+                           x:Name="pageCheckBox" 
+                           EditValueChanged="PageCheckBox_Checked"/>
+            <dxe:CheckEdit Content="Numbering List" 
+                           x:Name="listCheckBox" 
+                           EditValueChanged="ListCheckBox_Checked"/>
+        </StackPanel>
+        <Grid>
+            <dxre:RichEditControl x:Name="richEdit" 
+                                  ShowBorder="False"/>
+        </Grid>
+    </DockPanel>
 </Window>
