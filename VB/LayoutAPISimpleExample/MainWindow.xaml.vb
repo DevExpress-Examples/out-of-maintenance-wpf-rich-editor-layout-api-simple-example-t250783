@@ -76,7 +76,7 @@ Namespace LayoutAPISimpleExample
 		End Sub
 
 		Private Sub InlineCheckBox_Checked(ByVal sender As Object, ByVal e As RoutedEventArgs)
-			customDrawImage = If(inlineCheckBox.IsChecked =True, True, False)
+			customDrawImage = If(inlineCheckBox.IsChecked = True, True, False)
 			richEdit.Refresh()
 		End Sub
 
