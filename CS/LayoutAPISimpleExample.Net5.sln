@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutAPISimpleExample", "LayoutAPISimpleExample\LayoutAPISimpleExample.csproj", "{C2B8DF95-38A7-421B-9D42-A2019EB26E4D}"
+# Visual Studio 16
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutAPISimpleExample", "LayoutAPISimpleExample\LayoutAPISimpleExample.Net5.csproj", "{C2B8DF95-38A7-421B-9D42-A2019EB26E4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
